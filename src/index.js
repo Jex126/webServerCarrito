@@ -1,6 +1,8 @@
 import express from "express";
 import route  from "./routes/statusCarrito.route.js";
-import path from "path";
+import path,{dirname} from "path";
+import { fileURLToPath } from 'node:url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const corsMiddleware = (req, res, next) => {
     // Permitir acceso desde cualquier origen (ajusta esto según sea necesario)
@@ -32,10 +34,11 @@ app.disable('x-powered-by');
 app.use(route);
 
 app.set('view engine','ejs');
-app.set('views',path.resolve("src/views"));
+app.set('views',path.resolve(path.join(__dirname,"views")));
 
 app.use('/public',express.static(path.resolve("public")))
 
 app.use('/',(req,resp,next)=>{
     return resp.json({msj:"endpoint no encontrado"});
 })
+console.log(__dirname)
