@@ -8,10 +8,17 @@
 </head>
 <body>
     <script src="public/js/apifront.js"></script>
-    <button class="btn" onclick="getReq()">GET</button>  
-    <button class="btn btn__yellow" onclick="postReq()">POST</button>  
-    <button class="btn btn__blue" onclick="putReq()">PUT</button>  
-    <button class="btn btn__red" onclick="deleteReq()">DELETE</button>  
+    <div class="contenedor">
+    <button class="contenedor__btn" onclick="getReq()">BD</button>  
+    <button class="contenedor__btn btn__yellow" onclick='actStatus(0,"adelante")'>Adelante</button>  
+    <button class="contenedor__btn btn__blue" onclick='actStatus(1,"atras")'>Atráz</button>  
+    <button class="contenedor__btn btn__red" onclick='actStatus(2,"detenerse")'>Detenerse</button> 
+    <button class="contenedor__btn btn__yellow" onclick='actStatus(3,"vuelta_izq")'>Vuelta Izquierda</button> 
+    <button class="contenedor__btn btn__blue" onclick='actStatus(4,"vuelta_der")'>Vuelta Derecha</button> 
+    <button class="contenedor__btn btn__red" onclick='actStatus(5,"giro_izq")'>Giro Izquierda</button> 
+    <button class="contenedor__btn btn__yellow" onclick='actStatus(6,"giro_der")'>Giro Derecha</button> 
+    <button class="contenedor__btn btn__blue" onclick='actStatus(7,"demo")'>Demo</button>
+    </div>
     <pre id="consol"></pre>
     
 </body>

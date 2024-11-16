@@ -14,7 +14,7 @@ body {
 }
 
 /* Botones */
-.btn {
+.contenedor__btn {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -35,13 +35,13 @@ body {
 .btn__yellow{
     background-color: #afad4c;
 }
-.btn:hover {
+.contenedor__btn:hover {
     background-color: #ffffff;
     color: #333;
     transform: scale(1.05);
 }
 
-.btn:active {
+.contenedor__btn:active {
     background-color: #388e3c;
 }
 

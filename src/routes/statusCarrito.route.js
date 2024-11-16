@@ -1,17 +1,25 @@
 import {Router} from "express";
 import { getStatusCarrito, 
-    getLastCarrito, 
-    postCarrito,
-    deleteCarrito,
-    putCarrito,
+    postAdelante,
+    postAtras,
+    postVizq,
+    postVder,
+    postGizq,
+    postGder,
+    postDetenerse,
+    demo,
     rutaVistaPrin
  } from "../controllers/statusCarrito.controller.js";
 const route = Router();
 
 route.get('/',rutaVistaPrin);
 route.get('/statusCarrito',getStatusCarrito);
-route.get('/lastCarrito',getLastCarrito);
-route.post('/statusCarrito',postCarrito);
-route.delete('/statusCarrito',deleteCarrito);
-route.put('/statusCarrito',putCarrito);
+route.post('/adelante',postAdelante);
+route.post('/atras',postAtras);
+route.post('/detenerse',postDetenerse);
+route.post('/vuelta_izq',postVizq);
+route.post('/vuelta_der',postVder);
+route.post('/giro_izq',postGizq);
+route.post('/giro_der',postGder);
+route.post('/demo',demo);
 export default route
