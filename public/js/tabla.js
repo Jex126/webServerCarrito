@@ -1,7 +1,5 @@
 setInterval(updateTable, 2000);
 async function updateTable() {
-    const con = document.getElementById('consol');
-        con.innerText = "";
         const resp = await fetch('/statusCarrito');
         const data = await resp.json();
     const table = document.querySelector('table');
