@@ -2,8 +2,9 @@ import {
     statusCarrito,
     movimientos
 } from "../models/statusCarrito.Model.js";
-export const rutaVistaPrin = (req,resp)=>{
-resp.render('principal.ejs');
+export const rutaVistaPrin = async (req,resp)=>{
+    const [status] = await statusCarrito.getCont();
+resp.render('principal.ejs',{status});
 }
 export const getStatusCarrito = async(req,resp)=>{
     try{
