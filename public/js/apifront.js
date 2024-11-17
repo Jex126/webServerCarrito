@@ -20,16 +20,15 @@ async function getReq() {
 async function actStatus(status,ep) {
     try {
         const URL_API = "https://api.ipify.org/?format=json";
-        fetch(URL_API)
-            .then(respuestaRaw => respuestaRaw.json())
-            .then(respuesta => {
-                console.log(respuesta.ip);
-            });
+        const ipResp = await fetch(URL_API);
+        const ip = await ipResp.json();
+
         const con = document.getElementById('consol');
         const resp = await fetch(`/${ep}`, {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST', body: JSON.stringify({
-                status: `${status}`
+                status: `${status}`,
+                ip: `${ip.ip}`
             })
         })
         const data = await resp.json();

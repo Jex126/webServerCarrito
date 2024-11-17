@@ -7,7 +7,7 @@
     <title>Testing API REST</title>
 </head>
 <body>
-    <script src="public/js/apifront.js"></script>
+    
     <div class="contenedor">
     <button class="contenedor__btn" onclick="getReq()">BD</button>  
     <button class="contenedor__btn btn__yellow" onclick='actStatus(0,"adelante")'>Adelante</button>  
@@ -20,7 +20,7 @@
     <button class="contenedor__btn btn__blue" onclick='actStatus(7,"demo")'>Demo</button>
     </div>
     <pre id="consol"></pre>
-    <table>
+    <table id="table">
         <tr>
             <td>id</td>
             <td>Status</td>
@@ -40,6 +40,7 @@
             </tr>
         <%});%>
     </table>
-
+    <script src="public/js/apifront.js"></script>
+    <script src="public/js/tabla.js"></script>
 </body>
 </html>

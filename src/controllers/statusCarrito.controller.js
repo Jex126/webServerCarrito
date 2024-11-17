@@ -15,7 +15,7 @@ export const getStatusCarrito = async(req,resp)=>{
     }
 }
 export const postAdelante = async(req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Adelante",origin,id_device);
@@ -23,7 +23,7 @@ export const postAdelante = async(req,resp)=>{
 }
 
 export const postAtras = (req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Atrás",origin,id_device);
@@ -31,7 +31,7 @@ export const postAtras = (req,resp)=>{
 }
 
 export const postDetenerse = (req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Detener",origin,id_device);
@@ -39,7 +39,7 @@ export const postDetenerse = (req,resp)=>{
 }
 
 export const postVizq = (req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Vuelta_Izq",origin,id_device);
@@ -47,7 +47,7 @@ export const postVizq = (req,resp)=>{
 }
 
 export const postVder = (req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Vuelta_Der",origin,id_device);
@@ -55,7 +55,7 @@ export const postVder = (req,resp)=>{
 }
 
 export const postGizq = (req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Giro_Izq",origin,id_device);
@@ -63,7 +63,7 @@ export const postGizq = (req,resp)=>{
 }
 
 export const postGder = (req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Giro_Der",origin,id_device);
@@ -71,7 +71,7 @@ export const postGder = (req,resp)=>{
 }
 
 export const demo = (req,resp)=>{
-    const origin = req.headers.origin;
+    const origin = req.body.ip;
     const id_device = req.headers['user-agent'];
     const contPet = req.body.status;
     movimientos(contPet,"Demo",origin,id_device);
