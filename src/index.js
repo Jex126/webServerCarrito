@@ -36,9 +36,8 @@ app.use(route);
 app.set('view engine','ejs');
 app.set('views',path.resolve(path.join(__dirname,"views")));
 
-app.use('/public',express.static(path.resolve("public")))
+app.use('/public', express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/',(req,resp,next)=>{
     return resp.json({msj:"endpoint no encontrado"});
 })
-console.log(__dirname)
