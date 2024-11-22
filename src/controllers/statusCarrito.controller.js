@@ -6,6 +6,10 @@ export const rutaVistaPrin = async (req,resp)=>{
     const [status] = await statusCarrito.getCont();
 resp.render('principal.ejs',{status});
 }
+export const rutaTabla = async (req,resp)=>{
+    const [status] = await statusCarrito.getCont();
+resp.render('statusTable.ejs',{status});
+}
 export const getStatusCarrito = async(req,resp)=>{
     try{
         const [status] = await statusCarrito.getCont();

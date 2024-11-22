@@ -20,27 +20,9 @@
     <button class="contenedor__btn btn__blue" onclick='actStatus(7,"demo")'>Demo</button>
     </div>
     <pre id="consol"></pre>
-    <table id="table">
-        <tr>
-            <td>id</td>
-            <td>Status</td>
-            <td>Ip</td>
-            <td>Name</td>
-            <td>Date</td>
-            <td>Id Device</td>
-        </tr>
-        <%status.forEach(elemento=>{%>
-            <tr>
-                <td><%= elemento.id %></td>
-                <td><%= elemento.status %></td>
-                <td><%= elemento.ip_client %></td>
-                <td><%= elemento.name %></td>
-                <td><%= elemento.date %></td>
-                <td><%= elemento.id_device%></td>
-            </tr>
-        <%});%>
-    </table>
     <script src="public/js/apifront.js"></script>
-    <script src="public/js/tabla.js"></script>
+    <div class="cont__btnH">
+    <button class="contenedor__btn btn__blue--history" onclick="window.location.href='/tableStatus'">Historial</button>
+    </div>
 </body>
 </html>
