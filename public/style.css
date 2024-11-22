@@ -20,6 +20,7 @@ body {
     border: none;
     padding: 10px 20px;
     margin: 5px;
+    padding: 2px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -45,10 +46,11 @@ body {
     align-items: flex-end;
     justify-content: flex-end;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
 }
 .btn__blue--history{
-    background-color: #4c74af;
+    background-color: #754caf;
+    padding: 20px;
     margin:0 200px;
 }
 .contenedor__btn:active {
@@ -105,3 +107,24 @@ td {
 table td, table th {
     word-wrap: break-word;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+  }

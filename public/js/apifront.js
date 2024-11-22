@@ -18,12 +18,14 @@ async function getReq() {
     }
 }
 async function actStatus(status,ep) {
+    const con = document.getElementById('consol');
+    con.innerText = "";
     try {
         const URL_API = "https://api.ipify.org/?format=json";
         const ipResp = await fetch(URL_API);
         const ip = await ipResp.json();
 
-        const con = document.getElementById('consol');
+        
         const resp = await fetch(`/${ep}`, {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST', body: JSON.stringify({

@@ -7,22 +7,25 @@
     <title>Testing API REST</title>
 </head>
 <body>
-    
-    <div class="contenedor">
-    <button class="contenedor__btn" onclick="getReq()">BD</button>  
-    <button class="contenedor__btn btn__yellow" onclick='actStatus(0,"adelante")'>Adelante</button>  
-    <button class="contenedor__btn btn__blue" onclick='actStatus(1,"atras")'>Atráz</button>  
-    <button class="contenedor__btn btn__red" onclick='actStatus(2,"detenerse")'>Detenerse</button> 
-    <button class="contenedor__btn btn__yellow" onclick='actStatus(3,"vuelta_izq")'>Vuelta Izquierda</button> 
-    <button class="contenedor__btn btn__blue" onclick='actStatus(4,"vuelta_der")'>Vuelta Derecha</button> 
-    <button class="contenedor__btn btn__red" onclick='actStatus(5,"giro_izq")'>Giro Izquierda</button> 
-    <button class="contenedor__btn btn__yellow" onclick='actStatus(6,"giro_der")'>Giro Derecha</button> 
-    <button class="contenedor__btn btn__blue" onclick='actStatus(7,"demo")'>Demo</button>
-    </div>
+
+    <div class="grid-container">
+        <button class="contenedor__btn btn__yellow" onclick='actStatus(5,"giro_izq")'>Giro Izquierda</button> 
+        <button class="contenedor__btn" onclick='actStatus(0,"adelante")'>Adelante</button>
+        <button class="contenedor__btn btn__yellow" onclick='actStatus(6,"giro_der")'>Giro Derecha</button> 
+        <button class="contenedor__btn" onclick='actStatus(3,"vuelta_izq")'>Vuelta Izquierda</button> 
+        <!-- Espacio vacío -->
+        <button class="contenedor__btn btn__red" onclick='actStatus(2,"detenerse")'>Detenerse</button> 
+        <button class="contenedor__btn" onclick='actStatus(4,"vuelta_der")'>Vuelta Derecha</button> 
+        <button class="contenedor__btn btn__blue" onclick="getReq()">BD</button>  
+        <button class="contenedor__btn" onclick='actStatus(1,"atras")'>Atráz</button>  
+        <button class="contenedor__btn btn__blue" onclick='actStatus(7,"demo")'>Demo</button>
+
+        <!-- Espacio vacío -->
+      </div>
     <pre id="consol"></pre>
-    <script src="public/js/apifront.js"></script>
     <div class="cont__btnH">
     <button class="contenedor__btn btn__blue--history" onclick="window.location.href='/tableStatus'">Historial</button>
     </div>
+    <script src="public/js/apifront.js"></script>
 </body>
 </html>
