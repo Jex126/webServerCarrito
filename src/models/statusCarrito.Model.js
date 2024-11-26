@@ -4,6 +4,10 @@ export const statusCarrito = {
         const result = await conexion.query('select * from IoTCarStatus order by id DESC');
         return result;
     },
+    getlast: async()=>{ 
+        const result = await conexion.query('select * from IoTCarStatus order by id DESC limit 1');
+        return result;
+    }
 }
 
 export const movimientos = async(status,statusName,origin,id_device)=>{ 

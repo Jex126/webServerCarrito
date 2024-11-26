@@ -9,10 +9,12 @@ import { getStatusCarrito,
     postDetenerse,
     demo,
     rutaVistaPrin,
-    rutaTabla
+    rutaTabla,
+    ultimoReg
  } from "../controllers/statusCarrito.controller.js";
 const route = Router();
 
+route.get('/last',ultimoReg)
 route.get('/',rutaVistaPrin);
 route.get('/tableStatus',rutaTabla);
 route.get('/statusCarrito',getStatusCarrito);

@@ -81,3 +81,12 @@ export const demo = (req,resp)=>{
     movimientos(contPet,"Demo",origin,id_device);
     resp.json({msj:"Petición Demo"});
 }
+
+export const ultimoReg = async (req,resp)=>{
+    const ultimo = await statusCarrito.getlast();
+    const status = ultimo[0][0].status;
+    resp.writeHead(200, {
+        'Content-Type': 'text/plain; charset=utf-8',
+      });
+      resp.end(JSON.stringify(status));
+}
