@@ -19,6 +19,8 @@ async function getReq() {
 }
 async function actStatus(status,ep) {
     const con = document.getElementById('consol');
+    const input = document.getElementById('input');
+    const nombre = input.value;
     con.innerText = "";
     try {
         const URL_API = "https://api.ipify.org/?format=json";
@@ -30,7 +32,8 @@ async function actStatus(status,ep) {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST', body: JSON.stringify({
                 status: `${status}`,
-                ip: `${ip.ip}`
+                ip: `${ip.ip}`,
+                nombre:`${nombre}`
             })
         })
         const data = await resp.json();

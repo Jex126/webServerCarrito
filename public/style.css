@@ -85,6 +85,10 @@ th, td {
     text-align: left;
     border: 1px solid #ddd;
 }
+#input{
+    font-size: 25px;
+    margin: 10px;
+}
 
 th {
     background-color: #4CAF50;
